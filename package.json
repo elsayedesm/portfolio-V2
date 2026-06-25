@@ -1,0 +1,10 @@
+{
+  "name": "saiko-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Saiko video editor portfolio with Supabase admin dashboard",
+  "scripts": {
+    "build": "node scripts/generate-config.js",
+    "config:local": "node -e \"const fs=require('fs');fs.copyFileSync('js/config.example.js','js/config.js');console.log('Created js/config.js — edit it with your Supabase keys.');\""
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/Picsart_26-06-17_15-43-22-337.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Saiko's Portfolio Works</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">SAIKO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="contacts.html">CONTACTS</a></li>
+            </ul>
+        </nav>
+        <img src="assets/1777803539343.jpg" alt="saiko's picture">
+    </header>
+    <div class="works-header">
+        <h4>MY WORKS</h4>
+        <h1>SELECTED PROJECTS</h1>
+    </div>
+    <div class="works-dynamic">
+        <p id="projects-loading" class="projects-status">Loading projects...</p>
+        <p id="projects-empty" class="projects-status" hidden>No projects published yet. Check back soon.</p>
+        <p id="projects-error" class="projects-status projects-status-error" hidden></p>
+        <div class="projects-grid" id="projects-grid"></div>
+    </div>
+
+    <div class="project-modal" id="project-modal" hidden aria-hidden="true">
+        <div class="project-modal-backdrop" id="project-modal-backdrop"></div>
+        <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+            <button type="button" class="project-modal-close" id="project-modal-close" aria-label="Close project details">&times;</button>
+            <div class="project-modal-media" id="project-modal-media">
+                <img class="project-modal-image" id="project-modal-image" src="" alt="">
+                <button type="button" class="project-modal-play" id="project-modal-play" hidden aria-label="Watch video">
+                    <span class="project-modal-play-icon" aria-hidden="true">▶</span>
+                    <span class="project-modal-play-text">Watch Video</span>
+                </button>
+                <div class="project-modal-player" id="project-modal-player" hidden></div>
+            </div>
+            <h2 class="project-modal-title" id="project-modal-title"></h2>
+            <p class="project-modal-description" id="project-modal-description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p class="do">Do you have a project ? .... I'd be happy to work with you.</p>
+        <div class="email"><img src="assets/email.png" alt="Gmail"><p>saikoesmail02@gmail.com</p></div>
+        <p class="copy">Elsayed Anwar. All Rights 2026 &copy; Reserved</p>
+        <p class="by">Designed & Edited by Elsayed Anwar Esmail</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/validators.js"></script>
+    <script src="js/portfolio-api.js"></script>
+    <script src="js/portfolio-public.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Project Form — Saiko Admin</title>
+</head>
+<body class="admin-body">
+    <div id="admin-overlay" class="admin-overlay"></div>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="logo">SAIKO<small>ADMIN</small></div>
+            <ul class="admin-nav">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="project-form.html" class="active">Add Project</a></li>
+            </ul>
+            <div class="admin-sidebar-footer">
+                <a href="#" id="btn-logout" class="btn-outline btn-sm" style="display:block;text-align:center;">Logout</a>
+            </div>
+        </aside>
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <div>
+                    <button type="button" id="menu-toggle" class="admin-menu-toggle">☰ Menu</button>
+                    <h1 id="form-page-title">ADD PROJECT</h1>
+                    <p class="user-email" id="admin-user-email"></p>
+                </div>
+                <a href="projects.html" class="btn-outline">← All Projects</a>
+            </div>
+
+            <div id="form-error" class="admin-alert admin-alert-error" hidden></div>
+            <div id="form-success" class="admin-alert admin-alert-success" hidden></div>
+
+            <div class="admin-card">
+                <form id="project-form">
+                    <div class="admin-form-group">
+                        <label>Thumbnail Image</label>
+                        <div class="dropzone" id="dropzone">
+                            <p>Drag & drop an image here, or click to browse</p>
+                            <p class="hint">JPEG, PNG, WebP, GIF — max 5 MB</p>
+                            <img class="dropzone-preview" id="dropzone-preview" alt="Preview">
+                            <input type="file" id="thumbnail-file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+                        </div>
+                    </div>
+
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="title">Title *</label>
+                            <input type="text" id="title" name="title" required maxlength="200" placeholder="Project title">
+                        </div>
+                        <div class="admin-form-group">
+                            <label for="category">Category</label>
+                            <input type="text" id="category" name="category" maxlength="100" placeholder="e.g. Video Editing">
+                        </div>
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label for="description">Detailed Description</label>
+                        <textarea id="description" name="description" maxlength="5000" placeholder="Full project description shown in the popup when visitors click a project on the Works page"></textarea>
+                        <p class="hint">Visitors see only the image and title on the Works page. This text appears in the popup.</p>
+                    </div>
+
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="project_date">Project Date</label>
+                            <input type="date" id="project_date" name="project_date">
+                        </div>
+                        <div class="admin-form-group">
+                            <label for="technologies">Technologies (comma-separated)</label>
+                            <input type="text" id="technologies" name="technologies" placeholder="Premiere Pro, After Effects">
+                        </div>
+                    </div>
+
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="project_link">Video Link (URL)</label>
+                            <input type="url" id="project_link" name="project_link" placeholder="https://youtube.com/watch?v=...">
+                            <p class="hint">YouTube, Vimeo, or direct video URL. Visitors can click the image in the popup to watch.</p>
+                        </div>
+                        <div class="admin-form-group">
+                            <label for="sort_order">Sort Order (higher = first)</label>
+                            <input type="number" id="sort_order" name="sort_order" value="0" min="0" max="9999">
+                        </div>
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label class="admin-checkbox">
+                            <input type="checkbox" id="is_published" name="is_published" checked>
+                            Publish on website (visible to visitors)
+                        </label>
+                    </div>
+
+                    <div class="admin-actions">
+                        <button type="submit" class="btn-primary" id="form-submit">Create Project</button>
+                        <a href="projects.html" class="btn-outline">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/supabase-client.js"></script>
+    <script src="../js/validators.js"></script>
+    <script src="../js/portfolio-api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/project-form.js"></script>
+</body>
+</html>
