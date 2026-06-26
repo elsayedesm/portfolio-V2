@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +8,20 @@
     <link rel="stylesheet" href="styles.css">
     <title>Saiko's Portfolio Home</title>
 </head>
-<body>
+<body data-page="home">
     <header>
-        <h1 class="logo">SAIKO</h1>
+        <a href="index.html" class="logo">SAIKO<span class="logo-dot">.</span></a>
         <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="works.html">WORKS</a></li>
-                <li><a href="contacts.html">CONTACTS</a></li>
+                <li><a href="index.html" data-nav="home">HOME</a></li>
+                <li><a href="works.html" data-nav="works">WORKS</a></li>
+                <li><a href="contacts.html" data-nav="contacts">CONTACTS</a></li>
             </ul>
         </nav>
-        <img src="assets/1777803539343.jpg" alt="saiko's picture">
+        <div class="header-right">
+            <img src="assets/1777803539343.jpg" alt="saiko's picture">
+            <a href="contacts.html" class="hire-btn">HIRE ME</a>
+        </div>
     </header>
     <h1>ELSAYED ANWAR ESMAIL</h1>
     <h3>VIDEO EDITOR</h3>
@@ -42,3 +46,4 @@
     </footer>
 </body>
 </html>
+ 
