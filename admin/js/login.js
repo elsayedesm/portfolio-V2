@@ -28,7 +28,7 @@
         const session = await window.AdminAuth.getSession();
         if (session) {
             const ok = await window.AdminAuth.isAdminUser(session.user.id);
-            if (ok) window.location.href = 'dashboard.html';
+            if (ok) window.location.href = '/admin/dashboard';
         }
     })();
 
@@ -53,7 +53,7 @@
 
         try {
             await window.AdminAuth.signIn(email, password);
-            window.location.href = 'dashboard.html';
+            window.location.href = '/admin/dashboard';
         } catch (err) {
             errorEl.hidden = false;
             errorEl.textContent = err.message || 'Login failed. Please try again.';
