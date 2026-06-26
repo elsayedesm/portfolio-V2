@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="/admin/css/admin.css">
     <title>Dashboard — Saiko Admin</title>
 </head>
 <body class="admin-body">
@@ -13,9 +13,9 @@
         <aside class="admin-sidebar">
             <div class="logo">SAIKO<small>ADMIN</small></div>
             <ul class="admin-nav">
-                <li><a href="dashboard.html" class="active">Dashboard</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="project-form.html">Add Project</a></li>
+                <li><a href="/admin/dashboard" class="active">Dashboard</a></li>
+                <li><a href="/admin/projects">Projects</a></li>
+                <li><a href="/admin/project-form">Add Project</a></li>
             </ul>
             <div class="admin-sidebar-footer">
                 <a href="#" id="btn-logout" class="btn-outline btn-sm" style="display:block;text-align:center;">Logout</a>
@@ -28,9 +28,8 @@
                     <h1>DASHBOARD</h1>
                     <p class="user-email" id="admin-user-email"></p>
                 </div>
-                <a href="project-form.html" class="btn-primary">+ New Project</a>
+                <a href="/admin/project-form" class="btn-primary">+ New Project</a>
             </div>
-
             <div class="admin-stats">
                 <div class="stat-card">
                     <div class="label">Total Projects</div>
@@ -45,26 +44,24 @@
                     <div class="value" id="stat-drafts">—</div>
                 </div>
             </div>
-
             <div class="admin-card">
                 <h2>RECENT PROJECTS</h2>
                 <p class="hint">Public Works page shows image and title only. Descriptions appear in the click popup.</p>
                 <div id="dashboard-loading" class="admin-loading">Loading...</div>
                 <div id="recent-projects"></div>
             </div>
-
             <p style="margin-top:24px;">
-                <a href="../works.html" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm">View Public Works Page →</a>
+                <a href="/works" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm">View Public Works Page →</a>
             </p>
         </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="../js/config.js"></script>
-    <script src="../js/supabase-client.js"></script>
-    <script src="../js/validators.js"></script>
-    <script src="../js/portfolio-api.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/layout.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/supabase-client.js"></script>
+    <script src="/js/validators.js"></script>
+    <script src="/js/portfolio-api.js"></script>
+    <script src="/admin/js/auth.js"></script>
+    <script src="/admin/js/layout.js"></script>
+    <script src="/admin/js/dashboard.js"></script>
 </body>
 </html>
