@@ -182,6 +182,7 @@ header img{
 body > h1{
     font-size:5rem;
     display: flex;
+    text-align: center;
     justify-content: center;
     letter-spacing: 5px;
     margin-top: 70px;
