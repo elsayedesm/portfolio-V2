@@ -265,7 +265,7 @@ body > p:first-of-type{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:70px;
+    gap:50px;
     margin-top:50px;
 }
  
